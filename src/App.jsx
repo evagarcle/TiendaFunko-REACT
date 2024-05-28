@@ -9,7 +9,7 @@ import Register from './components/Register/Register'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import { FunkoProvider} from './funkoContext/FunkoState'
+import { FunkoProvider} from '/context/FunkoContext/FunkoState'
 
 function App() {
  
