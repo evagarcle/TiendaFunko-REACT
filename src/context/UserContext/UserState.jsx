@@ -33,12 +33,31 @@ export const UserProvider = ({children}) => {
     }
   }
 
+  const getLoggedUserInfo = async () => {
+    const token = localStorage.getItem("token")
+
+    try {
+      const res = await axios.get(API_URL + "/userInfo", {
+        headers: {
+          Authorization: token
+        }
+      })
+      dispatch({
+        type:"GET_USER_INFO",
+        payload:res.data
+      })
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   return (
     <UserContext.Provider
       value={{
         token: state.token,
         user:state.user,
-        login
+        login,
+        getLoggedUserInfo
       }}
       >
         {children}
