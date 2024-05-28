@@ -1,39 +1,77 @@
+import { Button, Form, Input } from 'antd'
+import { useContext } from 'react'
+import { UserContext } from '../../context/UserContext/UserState'
 
 const Login = () => {
+  const {login} = useContext(UserContext)
+  const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z_]{2,3}$/
+  
+  const onFinish = (values) => {
+    login(values)
+    console.log('Success:', values)
+  }
+
   return (
-    <div> <Form
+    <div>
+      <Form
     name="basic"
-    labelCol={{ span: 8 }}
-    wrapperCol={{ span: 16 }}
-    style={{ maxWidth: 600 }}
-    initialValues={{ remember: true }}
+    labelCol={{
+      span: 8,
+    }}
+    wrapperCol={{
+      span: 16,
+    }}
+    style={{
+      maxWidth: 600,
+    }}
+    initialValues={{
+      remember: true,
+    }}
     onFinish={onFinish}
-    onFinishFailed={onFinishFailed}
     autoComplete="off"
   >
-   
-    <Form.Item<FieldType>
+    <Form.Item
+      label="Email"
+      name="email"
+      rules={[
+        {
+          required: true,
+          message: 'Please input your email!',
+        },
+        {
+          pattern: emailRegex,
+          message: 'Please input your email!',
+        },
+      ]}
+    >
+      <Input />
+    </Form.Item>
+
+    <Form.Item
       label="Password"
       name="password"
-      rules={[{ required: true, message: 'Please input your password!' }]}
+      rules={[
+        {
+          required: true,
+          message: 'Please input your password!',
+        },
+      ]}
     >
       <Input.Password />
     </Form.Item>
 
-    <Form.Item<FieldType>
-      name="remember"
-      valuePropName="checked"
-      wrapperCol={{ offset: 8, span: 16 }}
+    <Form.Item
+      wrapperCol={{
+        offset: 8,
+        span: 16,
+      }}
     >
-      <Checkbox>Remember me</Checkbox>
-    </Form.Item>
-
-    <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
       <Button type="primary" htmlType="submit">
         Submit
       </Button>
     </Form.Item>
-  </Form></div>
+  </Form>
+    </div>
   )
 }
 

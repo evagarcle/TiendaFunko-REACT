@@ -17,18 +17,20 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <UserProvider>
         <FunkoProvider>
             <Header />
           <Routes>
             <Route path="/cart" element={<Cart />} />
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/" element={<Funkos />} />
+            <Route path="/funkos" element={<Funkos />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/register" element={<Register />} />
           </Routes>
           <Footer />
         </FunkoProvider>
+        </UserProvider>
         
       </BrowserRouter>
 
