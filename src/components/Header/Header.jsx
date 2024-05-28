@@ -7,9 +7,14 @@ const Header = () => {
   return (
     <div>Header
       <Link to={"/"}>Home</Link>
-      {
-        token ? <Link to={"/profile"}>Profile</Link> : <Link to={"/login"}>Login</Link>
-      }
+      {token ?  (
+        <>
+        <Link to={"/profile"}>Profile</Link>
+        <button> Cerrar sesión </button>
+        </>
+        ) : ( 
+        <Link to={"/login"}>Login</Link>
+      )}
     </div>
   )
 }
