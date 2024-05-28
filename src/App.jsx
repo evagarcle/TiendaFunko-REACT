@@ -9,7 +9,8 @@ import Register from './components/Register/Register'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import { FunkoProvider} from '/context/FunkoContext/FunkoState'
+import { UserProvider } from './context/UserContext/UserState'
+import { FunkoProvider } from './context/FunkoContext/FunkoState'
 
 function App() {
  
@@ -28,6 +29,7 @@ function App() {
           </Routes>
           <Footer />
         </FunkoProvider>
+        
       </BrowserRouter>
 
     </>

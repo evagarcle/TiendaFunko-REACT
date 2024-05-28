@@ -1,8 +1,8 @@
-const token = localStorage.getItem("token") || ""
-import { createContext, useReducer } from "react"
 import axios from "axios"
-import UserReducer from "./UserContext/UserReducer"
+import { createContext, useReducer } from "react"
+import UserReducer from "./UserReducer"
 
+const token = localStorage.getItem("token") || ""
 
 const initialState = {
   token: token,
@@ -32,4 +32,16 @@ export const UserProvider = ({children}) => {
       return error
     }
   }
+
+  return (
+    <UserContext.Provider
+      value={{
+        token: state.token,
+        user:state.user,
+        login
+      }}
+      >
+        {children}
+      </UserContext.Provider>
+  )
 }
