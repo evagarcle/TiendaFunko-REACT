@@ -9,14 +9,14 @@ import Register from './components/Register/Register'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import { GlobalProvider} from './context/GlobalState'
+import { FunkoProvider} from './funkoContext/FunkoState'
 
 function App() {
  
   return (
     <>
       <BrowserRouter>
-        <GlobalProvider>
+        <FunkoProvider>
             <Header />
           <Routes>
             <Route path="/cart" element={<Cart />} />
@@ -27,7 +27,7 @@ function App() {
             <Route path="/register" element={<Register />} />
           </Routes>
           <Footer />
-        </GlobalProvider>
+        </FunkoProvider>
       </BrowserRouter>
 
     </>

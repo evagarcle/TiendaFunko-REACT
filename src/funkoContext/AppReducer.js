@@ -3,7 +3,7 @@ const funkos = (state, action) => {
     case "GET_FUNKOS":
       return {
         ...state,
-        tasks: action.payload
+        funkos: action.payload
       }
     default:
       return state

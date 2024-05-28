@@ -1,18 +1,18 @@
 import axios from "axios";
 import { createContext, useReducer } from "react";
 import AppReducer from './AppReducer'
-import App from "../App";
 
 const API_URL = 'http://localhost:3002'
 
 const initialState = {
-  tasks: [],
+  funkos: [],
 }
 
 
-export const GlobalContext = createContext(initialState)
+export const FunkoContext = createContext(initialState)
 
-export const GlobalProvider = ({children}) => {
+// eslint-disable-next-line react/prop-types
+export const FunkoProvider = ({children}) => {
   const [state, dispatch] = useReducer(AppReducer, initialState)
 
   const getFunkos = async () => {
@@ -25,12 +25,12 @@ export const GlobalProvider = ({children}) => {
   }
 
   return (
-    <GlobalContext.Provider
+    <FunkoContext.Provider
     value={{
       funkos: state.funkos,
       getFunkos
     }}>
       {children}
-    </GlobalContext.Provider>
+    </FunkoContext.Provider>
   )
 }
