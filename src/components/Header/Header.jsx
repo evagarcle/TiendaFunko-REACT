@@ -1,16 +1,20 @@
 import { useContext } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { UserContext } from "../../context/UserContext/UserState"
 
 const Header = () => {
-  const {token} = useContext(UserContext)
+  const {token, logout} = useContext(UserContext)
+  const navigate = useNavigate()
   return (
     <div>Header
       <Link to={"/"}>Home</Link>
       {token ?  (
         <>
         <Link to={"/profile"}>Profile</Link>
-        <button> Cerrar sesión </button>
+        <button onClick={()=>{
+            logout()
+            navigate("/login")
+        }}>Logout</button>
         </>
         ) : ( 
         <Link to={"/login"}>Login</Link>

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { createContext, useReducer } from "react";
-import FunkoReducer from './FunkoReducer'
+import FunkoReducer from "FunkoReducer"
 
 const API_URL = 'http://localhost:3002/funkos'
 

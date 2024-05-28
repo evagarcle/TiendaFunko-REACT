@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react"
-import { FunkoContext } from "/context/FunkoContext/FunkoState"
+import { FunkoContext } from "./context/FunkoContext/FunkoState"
 
 const Funkos = () => {
   const {funkos, getFunkos, deleteFunko} = useContext(FunkoContext) 

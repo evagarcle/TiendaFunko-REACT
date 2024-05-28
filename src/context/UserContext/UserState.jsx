@@ -1,6 +1,6 @@
 import axios from "axios"
 import { createContext, useReducer } from "react"
-import UserReducer from "./UserReducer"
+import UserReducer from "UserReducer"
 
 const token = localStorage.getItem("token") || ""
 
@@ -76,7 +76,8 @@ export const UserProvider = ({children}) => {
         token: state.token,
         user:state.user,
         login,
-        getLoggedUserInfo
+        getLoggedUserInfo,
+        logout
       }}
       >
         {children}

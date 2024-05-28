@@ -5,11 +5,11 @@ import { Spin } from "antd"
 
 const Profile = () => {
 
-  const {getLoggedUserInfo, user} = useContext(UserContext)
+  const {getLoggedUserInfo, user, token} = useContext(UserContext)
 
   useEffect(()=>{
     getLoggedUserInfo()
-  }, [])
+  }, [token])
 
   if(!user) {
     return <Spin size="large"/>
