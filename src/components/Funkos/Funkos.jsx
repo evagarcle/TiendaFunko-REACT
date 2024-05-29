@@ -3,7 +3,7 @@ import { FunkoContext } from "../../context/FunkoContext/FunkoState"
 import Funko from "../Funko/Funko"
 
 const Funkos = () => {
-  const {funkos, getFunkos, deleteFunko} = useContext(FunkoContext) 
+  const {funkos, getFunkos} = useContext(FunkoContext) 
 
   useEffect(() => {
     getFunkos()
@@ -21,7 +21,7 @@ const Funkos = () => {
       return (
         <div key={funko.id}>
           <h2>{funko.name}</h2>
-          <button onClick={()=>deleteFunko(funko.id)}>Eliminar producto</button>
+          
         </div>
       )
     })}
