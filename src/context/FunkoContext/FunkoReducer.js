@@ -10,6 +10,11 @@ const funkos = (state, action) => {
         ...state,
         cart: [...state.cart, action.payload]
       }
+    case "CLEAR_CART":
+      return {
+        ...state,
+        cart: []
+      }
     default:
       return state
   }

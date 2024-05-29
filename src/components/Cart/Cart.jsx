@@ -4,7 +4,7 @@ import { Button, Empty } from "antd"
 import { Link } from "react-router-dom"
 
 const Cart = () => {
-  const {cart} = useContext(FunkoContext)
+  const {cart, clearCart} = useContext(FunkoContext)
 
   if(cart-length == 0){
     return <Empty
@@ -25,7 +25,9 @@ const Cart = () => {
           <p>{funko.price}</p>
         </div>
       )
-    })}</div>
+    })}
+    <button onClick={clearCart}>Vaciar carrito</button>
+    </div>
   )
 }
 

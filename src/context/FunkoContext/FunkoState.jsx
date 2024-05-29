@@ -35,6 +35,13 @@ export const FunkoProvider = ({children}) => {
     })
   }
 
+  const clearCart = () => {
+    dispatch({
+      type:"CLEAR_CART"
+
+    })
+  }
+
   const deleteFunko = async(id)=>{
     await axios.delete(API_URL + '/id/' + id)
     getFunkos()
@@ -47,6 +54,7 @@ export const FunkoProvider = ({children}) => {
       cart: state.cart,
       getFunkos,
       addCart,
+      clearCart,
       deleteFunko
     }}>
       {children}

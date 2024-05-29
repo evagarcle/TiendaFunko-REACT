@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { UserContext } from "../../context/UserContext/UserState"
 import {ShoppingCartOutlined} from "@ant-design/icons"
@@ -9,6 +9,11 @@ const Header = () => {
   const {token, logout} = useContext(UserContext)
   const {cart} = useContext(FunkoContext)
   const navigate = useNavigate()
+
+  useEffect(()=>{
+    localStorage.setItem("cart", JSON.stringify(cart))
+  }, [cart])
+
   return (
     <div>Header /
       <Link to={"/"}>Home /</Link>
