@@ -4,15 +4,17 @@ import FunkoReducer from "./FunkoReducer"
 
 const API_URL = 'http://localhost:3002/funkos'
 
+const cart = JSON.parse(localStorage.getItem("cart")) || [] 
+
 const initialState = {
   funkos: [],
-  cart: []
+  cart: cart
 }
 
 
 export const FunkoContext = createContext(initialState)
 
-// eslint-disable-next-line react/prop-types
+
 export const FunkoProvider = ({children}) => {
   const [state, dispatch] = useReducer(FunkoReducer, initialState)
 
@@ -26,6 +28,13 @@ export const FunkoProvider = ({children}) => {
     return res
   }
 
+  const addCart = (funko) => {
+    dispatch({
+      type: "ADD_CART",
+      payload: funko
+    })
+  }
+
   const deleteFunko = async(id)=>{
     await axios.delete(API_URL + '/id/' + id)
     getFunkos()
@@ -35,7 +44,9 @@ export const FunkoProvider = ({children}) => {
     <FunkoContext.Provider
     value={{
       funkos: state.funkos,
+      cart: state.cart,
       getFunkos,
+      addCart,
       deleteFunko
     }}>
       {children}

@@ -5,6 +5,11 @@ const funkos = (state, action) => {
         ...state,
         funkos: action.payload
       }
+    case "ADD_CART":
+      return {
+        ...state,
+        cart: [...state.cart, action.payload]
+      }
     default:
       return state
   }

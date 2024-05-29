@@ -1,10 +1,10 @@
 import { useContext } from "react"
-import { FunkoContext } from "../context/FunkoContext/FunkoState"
+import { FunkoContext } from "../../context/FunkoContext/FunkoState"
 import { Spin } from "antd"
 
 const Funko = () => {
 
-  const {funkos} = useContext(FunkoContext)
+  const {funkos, addCart} = useContext(FunkoContext)
 
   if(funkos.lenght == 0){
     return <Spin size="large"/>
@@ -15,6 +15,7 @@ const Funko = () => {
         <div key={funko.id}>
           <h2>{funko.name}</h2>
           <p>{funko.price}</p>
+          <button onClick={()=>addCart(funko)}>Añadir al carrito</button>
         </div>
       )
     })}</div>

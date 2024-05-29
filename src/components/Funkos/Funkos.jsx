@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react"
 import { FunkoContext } from "../../context/FunkoContext/FunkoState"
-import Funko from "../../Funko/Funko"
+import Funko from "../Funko/Funko"
 
 const Funkos = () => {
   const {funkos, getFunkos, deleteFunko} = useContext(FunkoContext) 
