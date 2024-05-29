@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react"
-import { FunkoContext } from "./context/FunkoContext/FunkoState"
+import { FunkoContext } from "../../context/FunkoContext/FunkoState"
+import Funko from "../../Funko/Funko"
 
 const Funkos = () => {
   const {funkos, getFunkos, deleteFunko} = useContext(FunkoContext) 
@@ -13,6 +14,9 @@ const Funkos = () => {
   }
   return (
     <div>
+
+      <Funko/>
+
       {funkos.map((funko)=>{
       return (
         <div key={funko.id}>
@@ -20,7 +24,8 @@ const Funkos = () => {
           <button onClick={()=>deleteFunko(funko.id)}>Eliminar producto</button>
         </div>
       )
-    })}</div>
+    })}
+    </div>
   )
 }
 

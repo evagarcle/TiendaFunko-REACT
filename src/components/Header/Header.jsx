@@ -8,6 +8,7 @@ const Header = () => {
   return (
     <div>Header
       <Link to={"/"}>Home</Link>
+      <Link to={"/funkos"}>Funkos</Link>
       {token ?  (
         <>
         <Link to={"/profile"}>Profile</Link>

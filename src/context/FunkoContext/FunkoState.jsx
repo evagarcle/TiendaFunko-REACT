@@ -1,11 +1,12 @@
 import axios from "axios";
 import { createContext, useReducer } from "react";
-import FunkoReducer from "FunkoReducer"
+import FunkoReducer from "./FunkoReducer"
 
 const API_URL = 'http://localhost:3002/funkos'
 
 const initialState = {
   funkos: [],
+  cart: []
 }
 
 
@@ -22,6 +23,7 @@ export const FunkoProvider = ({children}) => {
       payload: res.data
     }
     dispatch(action)
+    return res
   }
 
   const deleteFunko = async(id)=>{
