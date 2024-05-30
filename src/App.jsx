@@ -8,7 +8,7 @@ import Profile from './components/Profile/Profile'
 import Register from './components/Register/Register'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import './App.css'
+import './App.scss'
 import { UserProvider } from './context/UserContext/UserState'
 import { FunkoProvider } from './context/FunkoContext/FunkoState'
 

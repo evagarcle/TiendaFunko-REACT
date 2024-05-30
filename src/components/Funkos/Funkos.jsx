@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react"
 import { FunkoContext } from "../../context/FunkoContext/FunkoState"
 import Funko from "../Funko/Funko"
+import "../../../src/App.scss"
 
 const Funkos = () => {
   const {funkos, getFunkos} = useContext(FunkoContext) 
@@ -16,7 +17,7 @@ const Funkos = () => {
     <div>
 
       <Funko/>
-
+    
       {funkos.map((funko)=>{
       return (
         <div key={funko.id}>
@@ -25,6 +26,7 @@ const Funkos = () => {
         </div>
       )
     })}
+   
     </div>
   )
 }

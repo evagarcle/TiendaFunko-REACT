@@ -1,0 +1,14 @@
+.allFunkosDiv {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); // Ajusta 200px al tamaño mínimo que desees
+  gap: 16px; // Espacio entre los elementos, ajusta según prefieras
+  padding: 16px; // Espaciado alrededor del contenedor, opcional
+}
+
+.allFunkosDiv > div {
+  background-color: #f9f9f9; // Color de fondo de cada elemento, opcional
+  padding: 16px; // Espaciado dentro de cada elemento, ajusta según prefieras
+  border: 1px solid #ccc; // Bordes alrededor de cada elemento, opcional
+  border-radius: 8px; // Bordes redondeados, opcional
+  text-align: center; // Centra el texto dentro de cada elemento, opcional
+}
