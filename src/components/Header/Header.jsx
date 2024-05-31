@@ -4,6 +4,8 @@ import { UserContext } from "../../context/UserContext/UserState"
 import {ShoppingCartOutlined} from "@ant-design/icons"
 import { Badge } from "antd"
 import { FunkoContext } from "../../context/FunkoContext/FunkoState"
+import "../../../src/App.scss"
+import "../Header/Header.scss"
 
 const Header = () => {
   const {token, logout} = useContext(UserContext)
@@ -15,22 +17,23 @@ const Header = () => {
   }, [cart])
 
   return (
-    <div>Header /
-      <Link to={"/"}>Home /</Link>
-      <Link to={"/funkos"}>Funkos /</Link>
-      {token ?  (
+    <div className="header">
+      <Link to={"/"} className="nav-link">Home</Link>
+      <Link to={"/funkos"} className="nav-link">Funkos</Link>
+      {token ? (
         <>
-        <Link to={"/profile"}>Profile /</Link>
-        <Link to={"/cart"}>Cart <Badge count={cart.lenght} size="small"><ShoppingCartOutlined /></Badge>  /</Link>
-        <button onClick={()=>{
+        <Link to={"/profile"} className="nav-link">Profile</Link>
+        <Link to={"/cart"} className="nav-link">Cart <Badge count={cart.length} size="small"><ShoppingCartOutlined style={{ color: 'white' }}/></Badge></Link>
+        <button className="logout-button" onClick={()=>{
             logout()
             navigate("/login")
-        }}>Logout /</button>
+        }}>Logout </button>
         </>
         ) : ( 
-        <Link to={"/login"}>Login</Link>
+        <Link to={"/login"} className="nav-link">Login</Link>
       )}
     </div>
+
   )
 }
 

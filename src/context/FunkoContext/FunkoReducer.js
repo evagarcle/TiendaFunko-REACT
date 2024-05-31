@@ -10,6 +10,11 @@ const funkos = (state, action) => {
         ...state,
         cart: [...state.cart, action.payload]
       }
+    case "DELETE_FUNKO":
+      return {
+        ...state,
+        cart: state.cart.filter((funko) => funko.id !== action.payload),
+      }
     case "CLEAR_CART":
       return {
         ...state,

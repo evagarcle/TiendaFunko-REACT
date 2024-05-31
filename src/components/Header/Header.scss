@@ -1,0 +1,41 @@
+@import '../../colors.scss';
+@import '../../App.scss';
+
+
+
+/* Header styles */
+.header {
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text */
+  display: flex;
+  justify-content: flex-start; /* Align items to the start */
+  align-items: center; /* Center items vertically */
+  padding: 10px 20px;
+}
+
+/* Navigation link styles */
+.header .nav-link {
+  color:#05ec81; /* White text for links */
+  text-decoration: none;
+  margin-right: 10px; /* Espacio entre los enlaces */
+  transition: color 250ms;
+}
+
+.header .nav-link:hover {
+  color: #f0f0f0; /* Light grey on hover */
+}
+
+/* Logout button styles */
+.header .logout-button {
+  background: none;
+  border: none;
+  color: #ffffff; /* Texto blanco */
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: auto; /* Empuja el botón hacia la derecha */
+  transition: color 250ms;
+
+.header .logout-button:hover {
+  color: #f0f0f0; /* Light grey on hover */
+}
+}

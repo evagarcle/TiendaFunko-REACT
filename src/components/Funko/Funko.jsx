@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { FunkoContext } from "../../context/FunkoContext/FunkoState"
 import { Spin } from "antd"
 import "../../../src/App.scss"
+import "../Funko/Funko.scss"
 
 
 const Funko = () => {
@@ -12,12 +13,12 @@ const Funko = () => {
     return <Spin size="large"/>
   }
   return (
-    <div className="allFunkosDiv">{funkos.map(funko=>{
+    <div className="funkoContainer">{funkos.map(funko=>{
       return (
-        <div key={funko.id}>
+        <div className="div-funkos" key={funko.id}>
           <h2>{funko.name}</h2>
-          <p>{funko.price}</p>
-          <button onClick={()=>addCart(funko)}>Añadir al carrito</button>
+          <p>Precio: {funko.price} €</p>
+          <button className="button" onClick={()=>addCart(funko)}>Añadir al carrito</button>
         </div>
       )
     })}</div>

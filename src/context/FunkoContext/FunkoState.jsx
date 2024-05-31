@@ -42,9 +42,8 @@ export const FunkoProvider = ({children}) => {
     })
   }
 
-  const deleteFunko = async(id)=>{
-    await axios.delete(API_URL + '/id/' + id)
-    getFunkos()
+  const deleteFunko = (id) => {
+    dispatch({ type: "DELETE_FUNKO", payload: id });
   }
 
   return (

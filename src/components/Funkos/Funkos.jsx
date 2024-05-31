@@ -18,14 +18,7 @@ const Funkos = () => {
 
       <Funko/>
     
-      {funkos.map((funko)=>{
-      return (
-        <div key={funko.id}>
-          <h2>{funko.name}</h2>
-          
-        </div>
-      )
-    })}
+      
    
     </div>
   )

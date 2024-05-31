@@ -1,14 +1,22 @@
-.allFunkosDiv {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); // Ajusta 200px al tamaño mínimo que desees
-  gap: 16px; // Espacio entre los elementos, ajusta según prefieras
-  padding: 16px; // Espaciado alrededor del contenedor, opcional
-}
+@import 'colors';
 
-.allFunkosDiv > div {
-  background-color: #f9f9f9; // Color de fondo de cada elemento, opcional
-  padding: 16px; // Espaciado dentro de cada elemento, ajusta según prefieras
-  border: 1px solid #ccc; // Bordes alrededor de cada elemento, opcional
-  border-radius: 8px; // Bordes redondeados, opcional
-  text-align: center; // Centra el texto dentro de cada elemento, opcional
+
+
+.button {
+  background-color: $primary-light;
+  border-radius: 100px;
+  box-shadow: $shadow-light 0 -25px 18px -14px inset, $shadow-dark 0 1px 2px, $shadow-dark 0 2px 4px, $shadow-dark 0 4px 8px, $shadow-dark 0 8px 16px, $shadow-dark 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }

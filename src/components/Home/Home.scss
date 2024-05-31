@@ -1,0 +1,32 @@
+@import '../../colors.scss';
+@import '../../App.scss';
+
+.home-container {
+  margin-top: 100px;
+  max-width: 400px; 
+  padding: 20px; 
+  border: 2px solid #4CAF50; 
+  border-radius: 10px; 
+  background-color: #ffffff; 
+  text-align: center; 
+  transition: all 0.3s ease; 
+  
+}
+
+.home-container:hover {
+  background-color: #4CAF50; 
+  color: #ffffff; 
+}
+
+h1 {
+  font-size: 2rem; 
+  margin-bottom: 20px; 
+}
+
+p {
+  margin-bottom: 10px; 
+}
+
+p:last-child {
+  margin-bottom: 0; 
+}

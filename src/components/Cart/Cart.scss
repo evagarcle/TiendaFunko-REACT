@@ -1,0 +1,88 @@
+@import '../../colors.scss';
+@import '../../App.scss';
+
+.cartContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  margin: 20px;
+}
+
+
+.div-cartFunko {
+  background-color:#e08c8c;
+  border-radius: 20px;
+  box-shadow: white 0 4px 6px -1px, black 0 2px 4px -1px;
+  color: $text-light;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 20px;
+  margin: 10px;
+  transition: all 250ms;
+  text-align: center;
+  flex: 1 1 calc(25% - 20px); 
+  box-sizing: border-box;
+}
+
+.cart-button {
+  background-color: rgb(176, 176, 176);
+  border-radius: 100px;
+  box-shadow: rgb(211, 137, 137) 0 -25px 18px -14px inset,rgb(236, 158, 158) 0 1px 2px,white 0 2px 4px,rgb(183, 137, 137) 0 4px 8px,white 0 8px 16px,rgb(192, 150, 150) 0 16px 32px;
+  color: rgb(141, 31, 53);
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.cart-button:hover {
+  background-color: rgb(176, 176, 176);
+  border-radius: 100px;
+  box-shadow: rgb(211, 137, 137) 0 -25px 18px -14px inset,rgb(236, 158, 158) 0 1px 2px,white 0 2px 4px,rgb(183, 137, 137) 0 4px 8px,white 0 8px 16px,rgb(192, 150, 150) 0 16px 32px;
+  color: rgb(141, 31, 53);
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.classic-button {
+  background-color: #ffffff; 
+  border-radius: 100px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -25px 18px -14px inset, rgba(0, 0, 0, 0.15) 0 1px 2px, rgba(0, 0, 0, 0.15) 0 2px 4px, rgba(0, 0, 0, 0.15) 0 4px 8px, rgba(0, 0, 0, 0.15) 0 8px 16px, rgba(0, 0, 0, 0.15) 0 16px 32px;
+  color: #000000; 
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+
+.classic-button:hover {
+  background-color: #f0f0f0; 
+  color: #000000; 
+}
+
