@@ -22,15 +22,18 @@ const Header = () => {
       <Link to={"/funkos"} className="nav-link">Funkos</Link>
       {token ? (
         <>
-        <Link to={"/profile"} className="nav-link">Profile</Link>
-        <Link to={"/cart"} className="nav-link">Cart <Badge count={cart.length} size="small"><ShoppingCartOutlined style={{ color: 'white' }}/></Badge></Link>
+        <Link to={"/profile"} className="nav-link">Perfil</Link>
+        <Link to={"/cart"} className="nav-link">Carrito <Badge count={cart.length} size="small"><ShoppingCartOutlined style={{ color: 'white' }}/></Badge></Link>
         <button className="logout-button" onClick={()=>{
             logout()
             navigate("/login")
-        }}>Logout </button>
+        }}>Cerrar sesión </button>
         </>
         ) : ( 
-        <Link to={"/login"} className="nav-link">Login</Link>
+        <>
+        <Link to={"/register"} className="nav-link">Registrarse</Link>
+        <Link to={"/login"} className="nav-link">Iniciar sesión</Link>
+        </>
       )}
     </div>
 

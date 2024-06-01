@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="footer">
     <Link to={"/"} className="nav-link">Home</Link>
     <Link to={"/funkos"} className="nav-link">Funkos</Link>
-    <Link to={"/logout"} className="nav-link">Logout</Link>
+    <Link to={"/logout"} className="nav-link">Cerrar sesión</Link>
   </div>
   )
 }

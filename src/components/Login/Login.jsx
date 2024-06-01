@@ -36,7 +36,7 @@ const Login = () => {
     autoComplete="on"
   >
     <Form.Item
-      label="Email"
+      label="Correo electrónico"
       name="email"
       rules={[
         {
@@ -53,7 +53,7 @@ const Login = () => {
     </Form.Item>
 
     <Form.Item
-      label="Password"
+      label="Contraseña"
       name="password"
       rules={[
         {
@@ -72,7 +72,7 @@ const Login = () => {
       }}
     >
       <Button type="primary" htmlType="submit">
-        Submit
+        Iniciar sesión
       </Button>
     </Form.Item>
   </Form>
