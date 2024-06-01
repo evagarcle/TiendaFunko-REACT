@@ -3,39 +3,39 @@
 
 
 
-/* Header styles */
+
 .header {
-  background-color: #000000; /* Black background */
-  color: #ffffff; /* White text */
+  background-color: #000000; 
+  color: #ffffff; 
   display: flex;
-  justify-content: flex-start; /* Align items to the start */
-  align-items: center; /* Center items vertically */
+  justify-content: flex-start; 
+  align-items: center; 
   padding: 10px 20px;
 }
 
-/* Navigation link styles */
+
 .header .nav-link {
-  color:#05ec81; /* White text for links */
+  color:#05ec81; 
   text-decoration: none;
-  margin-right: 10px; /* Espacio entre los enlaces */
+  margin-right: 10px; 
   transition: color 250ms;
 }
 
 .header .nav-link:hover {
-  color: #f0f0f0; /* Light grey on hover */
+  color: #f0f0f0;
 }
 
 /* Logout button styles */
 .header .logout-button {
   background: none;
   border: none;
-  color: #ffffff; /* Texto blanco */
+  color: #ffffff; 
   cursor: pointer;
   font-size: 16px;
-  margin-left: auto; /* Empuja el botón hacia la derecha */
+  margin-left: auto; 
   transition: color 250ms;
 
 .header .logout-button:hover {
-  color: #f0f0f0; /* Light grey on hover */
+  color: #f0f0f0; 
 }
 }

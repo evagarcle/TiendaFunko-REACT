@@ -1,3 +1,23 @@
 @import '../../colors.scss';
 @import '../../App.scss';
 
+.profileContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  margin: 20px;
+}
+
+.div-orders {
+  background-color: rgb(150, 150, 234);
+  border-radius: 20px;
+  box-shadow: $shadow-light 0 4px 6px -1px, $shadow-dark 0 2px 4px -1px;
+  color: $text-light;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 20px;
+  margin: 10px;
+  transition: all 250ms;
+  text-align: center;
+  flex: 1 1 calc(25% - 20px); 
+  box-sizing: border-box;
+}

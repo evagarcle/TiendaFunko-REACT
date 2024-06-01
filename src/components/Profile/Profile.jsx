@@ -22,22 +22,24 @@ const Profile = () => {
   
   
   return (
-    <div key={user.id}>
-      <p>{user.firstName}</p>
-      <p>{user.email}</p>
+    <>
+      <div className="profileContainer" key={user.id}>
+        <p>{user.firstName}</p>
+        <p>{user.email}</p>
 
-      {user.Orders.map((order) => (
-        <div key={order.id}>
-          Order: {order.id}
+        {user.Orders.map((order) => (
+          <div className="div-orders" key={order.id}>
+            Order: {order.id}
 
-          {order.Funkos.map((funko) => (
-            <div key={funko.id}>&nbsp;&nbsp;&nbsp;&nbsp;Funko {funko.id}: {funko.name}</div>
-            
-          ))}
-        </div>
-    
-      ))}
-    </div>
+            {order.Funkos.map((funko) => (
+              <div key={funko.id}>&nbsp;&nbsp;&nbsp;&nbsp;Funko {funko.id}: {funko.name}</div>
+              
+            ))}
+          </div>
+      
+        ))}
+      </div>
+    </>
   )
   
 }
