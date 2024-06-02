@@ -142,3 +142,7 @@ Para ejecutar este proyecto localmente, sigue los siguientes pasos:
 ```
 
 Este README proporciona una visión general del proyecto, su estructura, funcionalidades y pasos para ejecutarlo localmente.
+![Captura de pantalla 2024-06-02 221600](https://github.com/evagarcle/TiendaFunko-REACT/assets/162992210/ff49d705-893c-4cd7-9e2b-93fc2765a706)
+![Captura de pantalla 2024-06-02 221541](https://github.com/evagarcle/TiendaFunko-REACT/assets/162992210/b9ea1bec-782b-4f98-9f0b-edca6673a784)
+![Captura de pantalla 2024-06-02 221510](https://github.com/evagarcle/TiendaFunko-REACT/assets/162992210/9a075d7c-1ca2-4eff-aed6-6e329cd5fc6b)
+
