@@ -24,12 +24,14 @@ const Profile = () => {
   return (
     <>
       <div className="profileContainer" key={user.id}>
-        <p>{user.firstName}</p>
-        <p>{user.email}</p>
+        <p>Tu nombre de usuario: {user.firstName}</p>
+        <p>Tu correo electrónico: {user.email}</p>
+
+        <h2>TUS PEDIDOS</h2>
 
         {user.Orders.map((order) => (
           <div className="div-orders" key={order.id}>
-            Order: {order.id}
+            Número de pedido: {order.id}
 
             {order.Funkos.map((funko) => (
               <div key={funko.id}>&nbsp;&nbsp;&nbsp;&nbsp;Funko {funko.id}: {funko.name}</div>

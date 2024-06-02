@@ -1,32 +1,54 @@
 @import '../../colors.scss';
 @import '../../App.scss';
 
-.home-container {
-  margin-top: 100px;
-  max-width: 400px; 
-  padding: 20px; 
-  border: 2px solid #4CAF50; 
-  border-radius: 10px; 
-  background-color: #ffffff; 
-  text-align: center; 
-  transition: all 0.3s ease; 
-  
-}
+.home {
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  margin-bottom: 100px;
 
-.home-container:hover {
-  background-color: #4CAF50; 
-  color: #ffffff; 
-}
+  &-header {
+    background-color: #64ca9f;
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 20px;
 
-h1 {
-  font-size: 2rem; 
-  margin-bottom: 20px; 
-}
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
 
-p {
-  margin-bottom: 10px; 
-}
+    p {
+      margin: 10px 0 0;
+      font-size: 1.2rem;
+    }
+  }
 
-p:last-child {
-  margin-bottom: 0; 
+  &-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    &-item {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      width: 200px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      p {
+        padding: 10px;
+        margin: 0;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+    }
+  }
 }
