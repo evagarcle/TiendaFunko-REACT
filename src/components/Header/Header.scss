@@ -5,7 +5,7 @@
 
 
 .header {
-  background-color: #000000; 
+  background-color: #ffffff; 
   color: #ffffff; 
   display: flex;
   justify-content: flex-start; 
@@ -15,8 +15,9 @@
 
 
 .header .nav-link {
-  color:#05ec81; 
+  color:#26a572; 
   text-decoration: none;
+  font-size: 20px;
   margin-right: 10px; 
   transition: color 250ms;
 }
@@ -29,7 +30,7 @@
 .header .logout-button {
   background: none;
   border: none;
-  color: #ffffff; 
+  color: #053726; 
   cursor: pointer;
   font-size: 16px;
   margin-left: auto; 

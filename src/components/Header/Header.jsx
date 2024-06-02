@@ -23,7 +23,7 @@ const Header = () => {
       {token ? (
         <>
         <Link to={"/profile"} className="nav-link">Perfil</Link>
-        <Link to={"/cart"} className="nav-link">Carrito <Badge count={cart.length} size="small"><ShoppingCartOutlined style={{ color: 'white' }}/></Badge></Link>
+        <Link to={"/cart"} className="nav-link">Carrito <Badge count={cart.length} size="small"><ShoppingCartOutlined style={{ color: 'black' }}/></Badge></Link>
         <button className="logout-button" onClick={()=>{
             logout()
             navigate("/login")
