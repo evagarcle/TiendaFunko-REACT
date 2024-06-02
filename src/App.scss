@@ -1,0 +1,22 @@
+@import 'colors';
+
+
+
+.button {
+  background-color: $primary-light;
+  border-radius: 100px;
+  box-shadow: $shadow-light 0 -25px 18px -14px inset, $shadow-dark 0 1px 2px, $shadow-dark 0 2px 4px, $shadow-dark 0 4px 8px, $shadow-dark 0 8px 16px, $shadow-dark 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
